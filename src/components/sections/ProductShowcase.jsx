@@ -2,7 +2,6 @@ import { products } from '../../data/products'
 import SectionReveal from '../ui/SectionReveal'
 import ProductCard from '../ui/ProductCard'
 import MangaPanel from '../ui/MangaPanel'
-import WhitePanel from '../ui/WhitePanel'
 import Container from '../ui/Container'
 
 const STAGGER_DELAY = 0.12
@@ -23,11 +22,9 @@ export default function ProductShowcase() {
       <Container>
         {/* Section header */}
         <SectionReveal>
-          <WhitePanel className="mb-8 inline-block px-4 py-1.5 rounded-sm">
-            <span className="font-mono text-[10px] tracking-[0.3em] text-void-900 uppercase">
-              02 — Objects
-            </span>
-          </WhitePanel>
+          <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
+            02 — Objects
+          </span>
         </SectionReveal>
         <SectionReveal delay={0.1}>
           <h2

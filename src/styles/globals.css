@@ -20,6 +20,9 @@
   --color-void-300: #BBBBBB;
   --color-void-100: #F0EDE8;
   --color-void-50:  #FAFAF8;
+  --color-paper:     #E8E1D2;
+  --color-paper-ink: #1A1815;
+  --color-paper-mute: #6B6356;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;

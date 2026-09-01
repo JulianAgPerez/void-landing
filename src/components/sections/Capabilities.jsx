@@ -1,6 +1,5 @@
 import SectionReveal from '../ui/SectionReveal'
-import MangaPanel from '../ui/MangaPanel'
-import WhitePanel from '../ui/WhitePanel'
+import PaperPanel from '../ui/PaperPanel'
 import Container from '../ui/Container'
 
 const specs = [
@@ -42,58 +41,50 @@ const specs = [
   },
 ]
 
-const panelStyles = [
-  { as: 'white', span: 'col-span-1 row-span-2', pad: 'p-8 md:p-10', offset: '' },
-  { as: 'dark', span: 'col-span-1', pad: 'p-6 md:p-8', offset: '' },
-  { as: 'dark', span: 'col-span-1', pad: 'p-6 md:p-8', offset: 'md:translate-y-8' },
-  { as: 'white', span: 'col-span-1', pad: 'p-6 md:p-8', offset: '' },
-  { as: 'dark', span: 'col-span-1 md:col-span-2', pad: 'p-6 md:p-8', offset: 'md:-translate-y-4' },
-  { as: 'dark', span: 'col-span-1', pad: 'p-6 md:p-8', offset: '' },
-]
-
-function SpecCard({ spec, style }) {
-  const isWhite = style.as === 'white'
-
-  const monoLabel = (
-    <span className="mt-4 block font-mono text-[10px] tracking-[0.25em] uppercase text-void-600">
-      {spec.label}
-    </span>
-  )
-
-  const description = (
-    <p className="mt-3 text-sm leading-relaxed text-void-500">
-      {spec.description}
-    </p>
-  )
-
+function SpecCard({ spec, wide = false }) {
   const number = (
     <span
-      className="block text-5xl font-light md:text-6xl lg:text-7xl"
+      className={`block text-5xl font-light text-paper-ink md:text-6xl ${wide ? 'lg:text-8xl' : 'lg:text-7xl'}`}
       style={{ fontFamily: 'var(--font-serif)', lineHeight: 1 }}
     >
       {spec.number}
     </span>
   )
 
-  if (isWhite) {
+  const monoLabel = (
+    <span className="mt-4 block font-mono text-[10px] tracking-[0.25em] text-paper-mute uppercase">
+      {spec.label}
+    </span>
+  )
+
+  const description = (
+    <p className="text-sm leading-relaxed text-paper-mute">
+      {spec.description}
+    </p>
+  )
+
+  if (wide) {
     return (
-      <WhitePanel className={`${style.span} ${style.pad} ${style.offset}`}>
-        {number}
-        {monoLabel}
-        {description}
-      </WhitePanel>
+      <PaperPanel className="h-full">
+        <div className="flex h-full flex-col justify-between gap-8 p-8 md:flex-row md:items-end md:p-10">
+          <div>
+            {number}
+            {monoLabel}
+          </div>
+          <div className="max-w-md">{description}</div>
+        </div>
+      </PaperPanel>
     )
   }
 
   return (
-    <MangaPanel
-      variant="frame"
-      className={`${style.span} ${style.pad} ${style.offset} h-full`}
-    >
-      {number}
-      {monoLabel}
-      {description}
-    </MangaPanel>
+    <PaperPanel className="h-full">
+      <div className="flex h-full flex-col p-8 md:p-10">
+        {number}
+        {monoLabel}
+        <div className="mt-3">{description}</div>
+      </div>
+    </PaperPanel>
   )
 }
 
@@ -102,89 +93,92 @@ export default function Capabilities() {
     <section
       id="details"
       aria-label="Details"
-      className="relative border-t border-white/15 bg-void-800 py-64 md:py-80 lg:py-[30rem]"
+      className="relative border-t-2 border-paper-ink bg-paper py-64 md:py-80 lg:py-[30rem]"
     >
-      {/* Subtle decorative MangaPanel frames */}
-      <MangaPanel
-        variant="accent"
-        className="absolute left-[5%] top-[12%] hidden h-32 w-px bg-white/8 lg:block"
-      />
-      <MangaPanel
-        variant="accent"
-        className="absolute right-[8%] bottom-[15%] hidden h-20 w-20 border border-white/6 lg:block"
-        style={{ transform: 'rotate(3deg)' }}
-      />
-
       <Container>
-        {/* Header */}
-        <SectionReveal>
-          <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
-            04 — Details
-          </span>
-        </SectionReveal>
-
-        <SectionReveal delay={0.1}>
-          <h2
-            className="mb-16 text-3xl font-light text-void-100 md:mb-24 md:text-4xl lg:text-5xl"
-            style={{ letterSpacing: '0.02em' }}
+        <div className="relative">
+          <span
+            aria-hidden="true"
+            className="absolute right-0 top-0 hidden font-mono text-[9px] tracking-[0.3em] text-paper-mute uppercase md:block"
           >
-            A quiet technical document.
-          </h2>
-        </SectionReveal>
+            P.04 — Specifications
+          </span>
 
-        {/* Asymmetric two-zone magazine spread */}
-        <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-12 md:gap-10">
-          {/* Left zone — editorial feature column (5/12) */}
-          <div className="flex flex-col gap-8 md:col-span-5">
-            {/* Editorial statement — big serif quote on white */}
-            <SectionReveal delay={0.15}>
-              <WhitePanel className="p-8 md:p-10 lg:p-12">
+          <SectionReveal>
+            <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-paper-mute uppercase">
+              04 — Details
+            </span>
+          </SectionReveal>
+
+          <SectionReveal delay={0.1}>
+            <div className="flex flex-wrap items-end gap-6 md:gap-8">
+              <h2
+                className="text-3xl font-light text-paper-ink md:text-5xl lg:text-6xl"
+                style={{ fontFamily: 'var(--font-serif)', letterSpacing: '0.02em' }}
+              >
+                A quiet technical document.
+              </h2>
+              <span
+                aria-hidden="true"
+                className="hidden h-14 w-14 shrink-0 items-center justify-center bg-paper-ink text-paper md:flex"
+                style={{ transform: 'rotate(-3deg)' }}
+              >
                 <span
-                  className="block text-6xl font-light md:text-7xl lg:text-8xl"
-                  style={{ fontFamily: 'var(--font-serif)', lineHeight: 0.9 }}
+                  className="text-2xl font-light leading-none"
+                  style={{ fontFamily: 'var(--font-serif)' }}
                 >
-                  Craft
+                  静
                 </span>
-                <span
-                  className="mt-2 block text-4xl font-light md:text-5xl lg:text-6xl"
-                  style={{ fontFamily: 'var(--font-serif)', lineHeight: 1 }}
-                >
-                  is quiet.
-                </span>
-                <p className="mt-6 max-w-xs text-sm leading-relaxed text-void-500">
-                  Six specifications. Each one a considered decision — not a feature list,
-                  but a philosophy made measurable.
-                </p>
-              </WhitePanel>
-            </SectionReveal>
+              </span>
+            </div>
+          </SectionReveal>
 
-            {/* Ink illustration in a white panel */}
-            <SectionReveal delay={0.25}>
-              <WhitePanel className="flex items-center justify-center p-8 md:p-10">
-                <img
-                  src="/images/matcha.svg"
-                  alt="Ceremonial matcha preparation — ink line drawing"
-                  className="h-48 w-full object-contain md:h-56 lg:h-64"
-                />
-              </WhitePanel>
-            </SectionReveal>
+          <SectionReveal delay={0.15}>
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-paper-mute md:mt-8">
+              Six measured facts, set in ink. The quiet specification sheet of a practice.
+            </p>
+          </SectionReveal>
+        </div>
 
-            {/* Figure caption */}
-            <SectionReveal delay={0.3}>
-              <span className="block font-mono text-[10px] tracking-[0.2em] text-void-500/60 uppercase">
+        <div className="mt-24 grid grid-cols-1 gap-2 md:mt-32 md:grid-cols-12">
+          <SectionReveal delay={0.2} className="md:col-span-4 md:row-span-2">
+            <PaperPanel className="relative flex h-full flex-col items-center justify-center p-8 md:p-10">
+              <span
+                aria-hidden="true"
+                className="absolute right-4 top-8 hidden select-none font-mono text-[10px] tracking-[0.5em] text-paper-ink/60 md:block"
+                style={{ writingMode: 'vertical-rl' }}
+              >
+                トク トク
+              </span>
+              <img
+                src="/images/matcha.svg"
+                alt="Ceremonial matcha preparation — ink line drawing"
+                className="w-full max-w-[15rem] brightness-0"
+              />
+              <span className="mt-10 block font-mono text-[9px] tracking-[0.25em] text-paper-mute uppercase">
                 Fig. 04 — Specifications, 2026
               </span>
-            </SectionReveal>
-          </div>
+            </PaperPanel>
+          </SectionReveal>
 
-          {/* Right zone — specs editorial list (7/12) */}
-          <div className="grid grid-cols-1 gap-6 md:col-span-7 md:grid-cols-2 md:gap-8">
-            {specs.map((spec, i) => (
-              <SectionReveal key={spec.label} delay={0.2 + i * 0.08}>
-                <SpecCard spec={spec} style={panelStyles[i]} />
-              </SectionReveal>
-            ))}
-          </div>
+          <SectionReveal delay={0.24} className="md:col-span-4">
+            <SpecCard spec={specs[0]} />
+          </SectionReveal>
+          <SectionReveal delay={0.28} className="md:col-span-4">
+            <SpecCard spec={specs[1]} />
+          </SectionReveal>
+          <SectionReveal delay={0.32} className="md:col-span-4">
+            <SpecCard spec={specs[2]} />
+          </SectionReveal>
+          <SectionReveal delay={0.36} className="md:col-span-4">
+            <SpecCard spec={specs[3]} />
+          </SectionReveal>
+          <SectionReveal delay={0.4} className="md:col-span-8">
+            <SpecCard spec={specs[4]} wide />
+          </SectionReveal>
+          <SectionReveal delay={0.44} className="md:col-span-4">
+            <SpecCard spec={specs[5]} />
+          </SectionReveal>
         </div>
       </Container>
     </section>
