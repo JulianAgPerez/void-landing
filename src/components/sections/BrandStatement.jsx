@@ -18,7 +18,7 @@ export default function BrandStatement() {
     <section
       id="brand"
       aria-label="Brand statement"
-      className="relative border-t border-void-700/20 bg-void-850 py-48 md:py-64 lg:py-72"
+      className="relative border-t border-white/10 bg-void-850 py-48 md:py-64 lg:py-72"
     >
       {/* Decorative floating panels — editorial depth */}
       <MangaPanel

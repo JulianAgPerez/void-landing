@@ -69,7 +69,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: prefersReducedMotion ? 0.3 : 1.1, delay: 0.3, ease: EASE }}
-          className="mb-10 inline-flex w-fit border border-white/[0.12] px-4 py-2 font-mono text-[10px] tracking-[0.25em] text-void-500 uppercase"
+          className="mb-10 inline-flex w-fit border border-white/12 px-4 py-2 font-mono text-[10px] tracking-[0.25em] text-void-500 uppercase"
         >
           VOID / EST. 2026 / No.001
         </motion.span>

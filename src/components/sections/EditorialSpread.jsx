@@ -21,7 +21,7 @@ export default function EditorialSpread() {
       id="editorial"
       aria-label="Editorial spread"
       ref={ref}
-      className="relative overflow-hidden bg-void-900"
+      className="relative overflow-hidden border-t border-white/10 bg-void-900"
     >
       <div className="relative min-h-screen">
         {/* Parallax background image */}

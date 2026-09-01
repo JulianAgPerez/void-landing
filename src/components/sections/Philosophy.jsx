@@ -25,19 +25,19 @@ export default function Philosophy() {
     <section
       id="philosophy"
       aria-label="Philosophy"
-      className="relative border-t border-void-700/20 bg-void-850 py-48 md:py-64 lg:pb-72"
+      className="relative border-t border-white/10 bg-void-850 py-48 md:py-64 lg:pb-96"
     >
       {/* Decorative escaped panel borders */}
       <MangaPanel
         variant="frame"
-        className="absolute right-[4%] top-[18%] hidden h-40 w-40 border-white/[0.06] lg:flex items-center justify-center"
+        className="absolute right-[4%] top-[18%] hidden h-40 w-40 border-white/6 lg:flex items-center justify-center"
         style={{ transform: 'rotate(2deg)' }}
       >
         <span className="text-4xl text-void-500/20" aria-hidden="true">静</span>
       </MangaPanel>
       <MangaPanel
         variant="frame"
-        className="absolute left-[3%] bottom-[20%] hidden h-28 w-2 border-white/[0.08] lg:block"
+        className="absolute left-[3%] bottom-[20%] hidden h-28 w-2 border-white/8 lg:block"
       />
 
       <Container className="text-center">

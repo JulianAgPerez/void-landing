@@ -11,7 +11,7 @@ export default function ProductShowcase() {
     <section
       id="shop"
       aria-label="Shop products"
-      className="relative border-t border-void-700/20 bg-void-900 py-40 md:py-56"
+      className="relative border-t border-white/10 bg-void-900 py-40 md:py-56"
     >
       {/* Decorative floating panel — overlaps EditorialSpread boundary */}
       <MangaPanel

@@ -74,7 +74,7 @@ export default function CTA() {
     <section
       id="contact"
       aria-label="Begin"
-      className="relative overflow-hidden border-t border-void-700/20 bg-void-850 py-56 md:py-72 lg:pt-80"
+      className="relative overflow-hidden border-t border-white/10 bg-void-850 py-56 md:py-72 lg:pt-96"
     >
       {/* Giant watermark — final editorial mark, fades as you leave */}
       {!prefersReducedMotion && (
