@@ -1,5 +1,6 @@
 import SectionReveal from '../ui/SectionReveal'
 import MangaPanel from '../ui/MangaPanel'
+import PaperPanel from '../ui/PaperPanel'
 import Container from '../ui/Container'
 
 const pillars = [
@@ -39,6 +40,23 @@ export default function Philosophy() {
         variant="frame"
         className="absolute left-[3%] bottom-[20%] hidden h-28 w-2 border-white/8 lg:block"
       />
+      {/* Paper accent — Ma (間) stamp */}
+      <PaperPanel
+        tone="dark"
+        className="absolute left-[8%] top-[38%] hidden flex-col items-center gap-2 p-4 lg:flex"
+        style={{ transform: 'rotate(-1.5deg)' }}
+      >
+        <span
+          className="text-2xl leading-none text-void-100"
+          style={{ fontFamily: 'var(--font-serif)' }}
+          aria-hidden="true"
+        >
+          間
+        </span>
+        <span className="font-mono text-[8px] tracking-[0.2em] text-void-400">
+          Ma
+        </span>
+      </PaperPanel>
 
       <Container className="text-center">
         {/* Header */}

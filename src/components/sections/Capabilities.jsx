@@ -45,7 +45,7 @@ const specs = [
 function SpecCard({ spec, wide = false }) {
   const number = (
     <span
-      className={`block text-5xl font-light text-paper-ink md:text-6xl ${wide ? 'lg:text-8xl' : 'lg:text-7xl'}`}
+      className={`block text-5xl font-light text-void-100 md:text-6xl ${wide ? 'lg:text-8xl' : 'lg:text-7xl'}`}
       style={{ fontFamily: 'var(--font-serif)', lineHeight: 1 }}
     >
       {spec.number}
@@ -53,20 +53,20 @@ function SpecCard({ spec, wide = false }) {
   )
 
   const monoLabel = (
-    <span className="mt-4 block font-mono text-[10px] tracking-[0.25em] text-paper-mute uppercase">
+    <span className="mt-4 block font-mono text-[10px] tracking-[0.25em] text-void-400 uppercase">
       {spec.label}
     </span>
   )
 
   const description = (
-    <p className="text-sm leading-relaxed text-paper-mute">
+    <p className="text-sm leading-relaxed text-void-400">
       {spec.description}
     </p>
   )
 
   if (wide) {
     return (
-      <PaperPanel className="h-full">
+      <PaperPanel tone="dark" className="h-full">
         <div className="flex h-full flex-col justify-between gap-8 p-8 md:flex-row md:items-end md:p-10">
           <div>
             {number}
@@ -79,7 +79,7 @@ function SpecCard({ spec, wide = false }) {
   }
 
   return (
-    <PaperPanel className="h-full">
+    <PaperPanel tone="dark" className="h-full">
       <div className="flex h-full flex-col p-8 md:p-10">
         {number}
         {monoLabel}
@@ -128,7 +128,7 @@ export default function Capabilities() {
               </h2>
               <span
                 aria-hidden="true"
-                className="hidden h-14 w-14 shrink-0 items-center justify-center bg-paper-ink text-paper md:flex"
+                className="hidden h-14 w-14 shrink-0 items-center justify-center border border-[#3A3A3A] bg-[#191919] text-void-100 md:flex"
                 style={{ transform: 'rotate(-3deg)' }}
               >
                 <span
@@ -146,14 +146,28 @@ export default function Capabilities() {
               Six measured facts, set in ink. The quiet specification sheet of a practice.
             </p>
           </SectionReveal>
+
+          {/* Paper accent — vertical specification label */}
+          <PaperPanel
+            tone="dark"
+            className="absolute -right-2 top-0 hidden flex-col items-center gap-3 px-3 py-5 lg:flex"
+            style={{ transform: 'rotate(1deg)' }}
+          >
+            <span
+              className="text-[9px] tracking-[0.3em] text-void-100 uppercase"
+              style={{ writingMode: 'vertical-rl' }}
+            >
+              Spec. Sheet
+            </span>
+          </PaperPanel>
         </div>
 
         <div className="mt-24 grid grid-cols-1 gap-2 md:mt-32 md:grid-cols-12">
           <SectionReveal delay={0.2} className="md:col-span-4 md:row-span-2">
-            <PaperPanel className="relative flex h-full flex-col items-center justify-center p-8 md:p-10">
+            <PaperPanel tone="dark" className="relative flex h-full flex-col items-center justify-center p-8 md:p-10">
               <span
                 aria-hidden="true"
-                className="absolute right-4 top-8 hidden select-none font-mono text-[10px] tracking-[0.5em] text-paper-ink/60 md:block"
+                className="absolute right-4 top-8 hidden select-none font-mono text-[10px] tracking-[0.5em] text-void-400/60 md:block"
                 style={{ writingMode: 'vertical-rl' }}
               >
                 トク トク
@@ -161,9 +175,9 @@ export default function Capabilities() {
               <img
                 src="/images/matcha.svg"
                 alt="Ceremonial matcha preparation — ink line drawing"
-                className="w-full max-w-[15rem] brightness-0"
+                className="w-full max-w-[15rem] brightness-0 invert"
               />
-              <span className="mt-10 block font-mono text-[9px] tracking-[0.25em] text-paper-mute uppercase">
+              <span className="mt-10 block font-mono text-[9px] tracking-[0.25em] text-void-400 uppercase">
                 Fig. 04 — Specifications, 2026
               </span>
             </PaperPanel>

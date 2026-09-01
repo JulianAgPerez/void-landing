@@ -2,6 +2,7 @@ import { products } from '../../data/products'
 import SectionReveal from '../ui/SectionReveal'
 import ProductCard from '../ui/ProductCard'
 import MangaPanel from '../ui/MangaPanel'
+import PaperPanel from '../ui/PaperPanel'
 import Container from '../ui/Container'
 
 const STAGGER_DELAY = 0.12
@@ -19,6 +20,23 @@ export default function ProductShowcase() {
         className="absolute right-0 bottom-8 hidden h-48 w-3 border-r border-t border-white/[0.07] lg:block"
         style={{ transform: 'rotate(-1deg)' }}
       />
+      {/* Paper accent — floating kanji stamp */}
+      <PaperPanel
+        tone="dark"
+        className="absolute right-[6%] top-32 hidden flex-col items-center gap-3 p-5 lg:flex"
+        style={{ transform: 'rotate(2deg)' }}
+      >
+        <span
+          className="text-3xl leading-none text-void-100"
+          style={{ fontFamily: 'var(--font-serif)' }}
+          aria-hidden="true"
+        >
+          物
+        </span>
+        <span className="font-mono text-[8px] tracking-[0.3em] text-void-400 uppercase">
+          Object
+        </span>
+      </PaperPanel>
       <Container>
         {/* Section header */}
         <SectionReveal>
