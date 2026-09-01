@@ -4,3 +4,5 @@ dist
 .env.local
 *.log
 .DS_Store
+
+# opencode skill registry artifacts.atl/
