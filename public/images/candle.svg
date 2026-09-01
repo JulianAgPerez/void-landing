@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#444" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Night ritual candle — elegant, minimal -->
+  <g opacity="0.85">
+    <!-- Flame — gentle teardrop -->
+    <path d="M200 110 Q194 130 196 148 Q198 158 200 162 Q202 158 204 148 Q206 130 200 110Z" stroke-width="0.8"/>
+
+    <!-- Inner flame -->
+    <path d="M200 125 Q197 135 198 145 Q199 150 200 152 Q201 150 202 145 Q203 135 200 125Z" stroke-width="0.4" opacity="0.5"/>
+
+    <!-- Wick -->
+    <path d="M200 162 L200 175" stroke-width="0.8"/>
+
+    <!-- Glow hint — very subtle circle -->
+    <circle cx="200" cy="140" r="25" stroke-width="0.3" opacity="0.12"/>
+
+    <!-- Candle body — cylinder -->
+    <path d="M175 175 L175 340" stroke-width="1.2"/>
+    <path d="M225 175 L225 340" stroke-width="1.2"/>
+
+    <!-- Top rim — slight ellipse -->
+    <ellipse cx="200" cy="175" rx="25" ry="6" stroke-width="1"/>
+
+    <!-- Wax drips — one or two organic drips -->
+    <path d="M175 200 Q173 215 174 230 Q175 235 176 232 Q177 225 175 215" stroke-width="0.6" opacity="0.4"/>
+    <path d="M225 215 Q227 228 226 240 Q225 243 224 240 Q223 232 225 222" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Bottom rim -->
+    <ellipse cx="200" cy="340" rx="25" ry="6" stroke-width="1"/>
+
+    <!-- Base/pedestal — simple square holder -->
+    <path d="M155 340 L155 370 L245 370 L245 340" stroke-width="1"/>
+    <path d="M155 370 L150 380 L250 380 L245 370" stroke-width="1"/>
+    <line x1="150" y1="380" x2="250" y2="380" stroke-width="0.5" opacity="0.4"/>
+
+    <!-- Base shadow -->
+    <ellipse cx="200" cy="385" rx="55" ry="5" stroke-width="0.4" opacity="0.15"/>
+
+    <!-- Subtle wax pool at top -->
+    <ellipse cx="200" cy="177" rx="20" ry="4" stroke-width="0.3" opacity="0.2"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none" stroke="#444" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Steaming bowl scene — ink brush style -->
+  <g opacity="0.9">
+    <!-- Steam wisps -->
+    <path d="M170 180 Q165 155 172 130 Q178 105 168 80" stroke-width="0.8" opacity="0.5"/>
+    <path d="M200 170 Q195 140 202 110 Q208 85 198 55" stroke-width="0.8" opacity="0.4"/>
+    <path d="M230 175 Q225 150 232 125 Q238 100 228 75" stroke-width="0.8" opacity="0.45"/>
+    <path d="M185 178 Q182 158 188 138 Q193 118 186 95" stroke-width="0.6" opacity="0.3"/>
+    <path d="M215 172 Q210 148 217 122 Q223 98 213 70" stroke-width="0.6" opacity="0.35"/>
+
+    <!-- Bowl body -->
+    <ellipse cx="200" cy="280" rx="95" ry="30" stroke-width="1.2"/>
+    <path d="M105 280 Q108 320 130 345 Q160 365 200 370 Q240 365 270 345 Q292 320 295 280" stroke-width="1.2"/>
+
+    <!-- Bowl rim — double line for depth -->
+    <ellipse cx="200" cy="278" rx="92" ry="28" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- Surface of tea -->
+    <ellipse cx="200" cy="278" rx="85" ry="22" stroke-width="0.4" opacity="0.3"/>
+
+    <!-- Subtle shadow -->
+    <ellipse cx="200" cy="380" rx="70" ry="8" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- Small leaf floating -->
+    <path d="M185 275 Q190 270 195 275" stroke-width="0.5" opacity="0.4"/>
+  </g>
+</svg>

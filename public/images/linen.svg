@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#444" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Folded linen — soft organic folds -->
+  <g opacity="0.85">
+    <!-- Main fold — top layer -->
+    <path d="M120 160 Q160 155 200 158 Q240 161 280 157 Q290 156 295 158" stroke-width="1.2"/>
+
+    <!-- First fold drape -->
+    <path d="M120 160 Q118 195 120 230 Q122 265 128 295 Q132 310 140 320" stroke-width="1.2"/>
+
+    <!-- Right drape -->
+    <path d="M280 157 Q285 190 282 225 Q278 260 270 290 Q265 305 258 315" stroke-width="1.2"/>
+
+    <!-- Bottom edge -->
+    <path d="M140 320 Q170 330 200 328 Q230 326 258 315" stroke-width="1.2"/>
+
+    <!-- Inner fold lines — fabric creases -->
+    <path d="M150 170 Q155 210 152 250 Q150 280 155 305" stroke-width="0.5" opacity="0.3"/>
+    <path d="M200 165 Q198 205 200 245 Q202 280 198 310" stroke-width="0.4" opacity="0.25"/>
+    <path d="M250 162 Q253 200 250 240 Q247 275 252 300" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Fold shadow — layered fabric visible at top -->
+    <path d="M130 158 Q132 152 138 150 Q145 148 155 152" stroke-width="0.6" opacity="0.35"/>
+    <path d="M165 155 Q168 148 175 147 Q185 146 195 150" stroke-width="0.6" opacity="0.3"/>
+
+    <!-- Texture — tiny weave marks -->
+    <path d="M170 190 L173 192" stroke-width="0.3" opacity="0.2"/>
+    <path d="M210 200 L213 202" stroke-width="0.3" opacity="0.2"/>
+    <path d="M180 230 L183 232" stroke-width="0.3" opacity="0.15"/>
+    <path d="M230 215 L233 217" stroke-width="0.3" opacity="0.2"/>
+    <path d="M190 260 L193 262" stroke-width="0.3" opacity="0.15"/>
+    <path d="M240 250 L243 252" stroke-width="0.3" opacity="0.15"/>
+
+    <!-- Loose thread end — organic detail -->
+    <path d="M140 320 Q138 328 140 335" stroke-width="0.4" opacity="0.3"/>
+  </g>
+</svg>

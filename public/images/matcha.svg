@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#444" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Matcha scoop with tea dust — ink style -->
+  <g opacity="0.85">
+    <!-- Chashaku (bamboo scoop) -->
+    <path d="M120 120 Q140 125 180 155 Q220 185 260 210 Q270 215 275 218" stroke-width="1.2"/>
+    <path d="M118 118 Q138 123 178 153 Q218 183 258 208 Q268 213 273 216" stroke-width="0.4" opacity="0.3"/>
+
+    <!-- Scoop tip — curved -->
+    <path d="M260 210 Q280 215 290 205 Q295 195 288 188 Q280 192 275 200" stroke-width="0.8"/>
+
+    <!-- Matcha powder — scattered dots -->
+    <circle cx="200" cy="300" r="1" fill="#444" stroke="none" opacity="0.4"/>
+    <circle cx="220" cy="310" r="0.8" fill="#444" stroke="none" opacity="0.35"/>
+    <circle cx="190" cy="315" r="1.2" fill="#444" stroke="none" opacity="0.3"/>
+    <circle cx="240" cy="295" r="0.7" fill="#444" stroke="none" opacity="0.35"/>
+    <circle cx="175" cy="305" r="0.9" fill="#444" stroke="none" opacity="0.3"/>
+    <circle cx="210" cy="320" r="1.1" fill="#444" stroke="none" opacity="0.25"/>
+    <circle cx="255" cy="308" r="0.8" fill="#444" stroke="none" opacity="0.3"/>
+    <circle cx="165" cy="295" r="0.6" fill="#444" stroke="none" opacity="0.25"/>
+    <circle cx="230" cy="325" r="1" fill="#444" stroke="none" opacity="0.2"/>
+
+    <!-- Small bowl edge hint -->
+    <path d="M140 280 Q160 340 200 350 Q240 340 260 280" stroke-width="0.5" opacity="0.25"/>
+  </g>
+</svg>
