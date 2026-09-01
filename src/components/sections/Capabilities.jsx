@@ -1,5 +1,6 @@
 import SectionReveal from '../ui/SectionReveal'
 import PaperPanel from '../ui/PaperPanel'
+import MangaPanel from '../ui/MangaPanel'
 import Container from '../ui/Container'
 
 const specs = [
@@ -93,19 +94,26 @@ export default function Capabilities() {
     <section
       id="details"
       aria-label="Details"
-      className="relative border-t-2 border-paper-ink bg-paper py-64 md:py-80 lg:py-[30rem]"
+      className="relative border-t border-white/15 bg-void-850 py-64 md:py-80 lg:py-[30rem]"
     >
+      {/* Decorative escaped panel border */}
+      <MangaPanel
+        variant="frame"
+        className="absolute left-[4%] top-[15%] hidden h-32 w-2 border-white/[0.06] lg:block"
+        style={{ transform: 'rotate(1deg)' }}
+      />
+
       <Container>
         <div className="relative">
           <span
             aria-hidden="true"
-            className="absolute right-0 top-0 hidden font-mono text-[9px] tracking-[0.3em] text-paper-mute uppercase md:block"
+            className="absolute right-0 top-0 hidden font-mono text-[9px] tracking-[0.3em] text-void-500 uppercase md:block"
           >
             P.04 — Specifications
           </span>
 
           <SectionReveal>
-            <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-paper-mute uppercase">
+            <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
               04 — Details
             </span>
           </SectionReveal>
@@ -113,7 +121,7 @@ export default function Capabilities() {
           <SectionReveal delay={0.1}>
             <div className="flex flex-wrap items-end gap-6 md:gap-8">
               <h2
-                className="text-3xl font-light text-paper-ink md:text-5xl lg:text-6xl"
+                className="text-3xl font-light text-void-100 md:text-5xl lg:text-6xl"
                 style={{ fontFamily: 'var(--font-serif)', letterSpacing: '0.02em' }}
               >
                 A quiet technical document.
@@ -134,7 +142,7 @@ export default function Capabilities() {
           </SectionReveal>
 
           <SectionReveal delay={0.15}>
-            <p className="mt-6 max-w-md text-sm leading-relaxed text-paper-mute md:mt-8">
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-void-400 md:mt-8">
               Six measured facts, set in ink. The quiet specification sheet of a practice.
             </p>
           </SectionReveal>
