@@ -20,7 +20,7 @@ export default function MangaPanel({
   return (
     <div
       aria-hidden={!children ? 'true' : undefined}
-      className={`border border-white/[0.12] bg-white/[0.02] ${isFloat ? 'shadow-lg shadow-black/20' : ''} ${className}`}
+      className={`border border-white/12 bg-white/2 ${isFloat ? 'shadow-lg shadow-black/20' : ''} ${className}`}
       style={{
         transform: isFloat ? `rotate(${rotation}deg)` : undefined,
         ...style,

@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @theme {
   --color-void-900: #0D0D0D;
   --color-void-850: #141414;
@@ -14,14 +24,6 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /* Scroll is controlled by Lenis — do not set smooth here */

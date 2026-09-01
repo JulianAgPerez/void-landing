@@ -25,7 +25,7 @@ export default function Philosophy() {
     <section
       id="philosophy"
       aria-label="Philosophy"
-      className="relative border-t border-white/10 bg-void-850 py-48 md:py-64 lg:pb-96"
+      className="relative border-t border-white/15 bg-void-850 py-64 md:py-80 lg:py-[30rem]"
     >
       {/* Decorative escaped panel borders */}
       <MangaPanel

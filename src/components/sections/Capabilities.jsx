@@ -46,7 +46,7 @@ export default function Capabilities() {
     <section
       id="details"
       aria-label="Details"
-      className="relative border-t border-white/10 bg-void-900 py-48 md:py-64 lg:pt-80 lg:pb-96"
+      className="relative border-t border-white/15 bg-void-800 py-64 md:py-80 lg:py-[30rem]"
     >
       <Container>
         {/* Decorative outer frame around entire specs section */}
