@@ -36,6 +36,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Visible keyboard focus — calm, consistent ring on the warm-noir palette */
+:focus-visible {
+  outline: 2px solid var(--color-void-300);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 ::selection {
   background-color: rgba(240, 237, 232, 0.9);
   color: #0D0D0D;

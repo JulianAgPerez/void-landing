@@ -14,10 +14,12 @@ export default function GrainOverlay() {
     const ctx = canvas.getContext('2d')
     let animationId
     let frame = 0
+    let imageData
 
     const resize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
+      imageData = ctx.createImageData(canvas.width, canvas.height)
     }
 
     const render = () => {
@@ -29,14 +31,12 @@ export default function GrainOverlay() {
         return
       }
 
-      const { width, height } = canvas
-      ctx.clearRect(0, 0, width, height)
+      const data = imageData.data
+      // Reuse the buffer: clear last frame's dots first
+      data.fill(0)
 
       // Low opacity pulsing — breathing grain
       const pulse = 0.025 + Math.sin(frame * 0.008) * 0.012
-
-      const imageData = ctx.createImageData(width, height)
-      const data = imageData.data
       const len = data.length
 
       // Sparse noise — only ~3% of pixels get a dot

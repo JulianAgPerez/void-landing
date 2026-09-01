@@ -8,6 +8,7 @@ import ProductShowcase from './components/sections/ProductShowcase'
 import EditorialSpread from './components/sections/EditorialSpread'
 import Philosophy from './components/sections/Philosophy'
 import Capabilities from './components/sections/Capabilities'
+import CTA from './components/sections/CTA'
 
 export default function App() {
   return (
@@ -22,9 +23,7 @@ export default function App() {
           <EditorialSpread />
           <Philosophy />
           <Capabilities />
-
-          {/* CTA — to be built in a later task */}
-          <section id="contact" aria-label="Contact" />
+          <CTA />
         </main>
 
         <Footer />
