@@ -3,6 +3,11 @@ import GrainOverlay from './components/effects/GrainOverlay'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
+import BrandStatement from './components/sections/BrandStatement'
+import ProductShowcase from './components/sections/ProductShowcase'
+import EditorialSpread from './components/sections/EditorialSpread'
+import Philosophy from './components/sections/Philosophy'
+import Capabilities from './components/sections/Capabilities'
 
 export default function App() {
   return (
@@ -12,23 +17,13 @@ export default function App() {
 
         <main>
           <Hero />
+          <BrandStatement />
+          <ProductShowcase />
+          <EditorialSpread />
+          <Philosophy />
+          <Capabilities />
 
-          {/* To be built in the next task */}
-          <section id="brand" aria-label="Brand statement" />
-
-          {/* ProductShowcase */}
-          <section id="shop" aria-label="Shop products" />
-
-          {/* EditorialSpread */}
-          <section id="editorial" aria-label="Editorial spread" />
-
-          {/* Philosophy */}
-          <section id="philosophy" aria-label="Philosophy" />
-
-          {/* Capabilities */}
-          <section id="details" aria-label="Details" />
-
-          {/* CTA */}
+          {/* CTA — to be built in a later task */}
           <section id="contact" aria-label="Contact" />
         </main>
 
