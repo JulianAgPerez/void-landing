@@ -46,7 +46,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 1.4, ease: EASE }}
-          className="absolute right-8 top-1/2 hidden translate-y-[-50%] select-none text-[11px] tracking-[1.2em] text-void-400/50 md:block"
+          className="absolute right-8 top-1/2 hidden translate-y-[-50%] select-none text-[11px] tracking-[1.2em] text-void-400/50 md:right-14 md:block lg:right-24 xl:right-32"
           style={{ writingMode: 'vertical-rl' }}
           aria-hidden="true"
         >
@@ -57,7 +57,7 @@ export default function Hero() {
       {/* Main content */}
       <motion.div
         style={prefersReducedMotion ? undefined : { y: contentY, opacity }}
-        className="relative z-10 flex min-h-screen flex-col justify-center px-6 pt-24 pb-40 lg:px-24"
+        className="relative z-10 flex min-h-screen flex-col justify-center px-6 sm:px-8 md:px-14 pt-24 pb-40 lg:px-24 xl:px-32"
       >
         {/* Decorative tall narrow frame — right side */}
         <MangaPanel
@@ -104,7 +104,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.6, ease: EASE }}
-          className="absolute bottom-0 left-6 z-20 lg:left-24"
+          className="absolute bottom-0 left-6 z-20 sm:left-8 md:left-14 lg:left-24 xl:left-32"
         >
           <div className="flex flex-col items-start gap-3 pb-8">
             <span className="font-mono text-[10px] tracking-[0.25em] text-void-500 uppercase">

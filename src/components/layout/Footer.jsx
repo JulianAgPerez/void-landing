@@ -1,3 +1,5 @@
+import Container from '../ui/Container'
+
 const footerLinks = [
   { label: 'Shop', href: '#shop' },
   { label: 'Philosophy', href: '#philosophy' },
@@ -8,7 +10,7 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-void-700/30 bg-void-900">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      <Container className="py-16 md:py-24">
         <div className="flex flex-col items-center gap-10 md:flex-row md:justify-between">
           {/* Wordmark */}
           <div className="flex flex-col items-center gap-3 md:items-start">
@@ -49,7 +51,7 @@ export default function Footer() {
             The beauty of nothing.
           </span>
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

@@ -2,6 +2,7 @@ import { products } from '../../data/products'
 import SectionReveal from '../ui/SectionReveal'
 import ProductCard from '../ui/ProductCard'
 import MangaPanel from '../ui/MangaPanel'
+import Container from '../ui/Container'
 
 const STAGGER_DELAY = 0.12
 
@@ -18,10 +19,10 @@ export default function ProductShowcase() {
         className="absolute right-0 bottom-8 hidden h-48 w-3 border-r border-t border-white/[0.07] lg:block"
         style={{ transform: 'rotate(-1deg)' }}
       />
-      <div className="mx-auto max-w-7xl px-6 lg:px-24">
+      <Container>
         {/* Section header */}
         <SectionReveal>
-          <span className="mb-4 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
+          <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
             02 — Objects
           </span>
         </SectionReveal>
@@ -60,7 +61,7 @@ export default function ProductShowcase() {
             </div>
           </SectionReveal>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

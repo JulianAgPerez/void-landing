@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import SectionReveal from '../ui/SectionReveal'
 import MangaPanel from '../ui/MangaPanel'
+import Container from '../ui/Container'
 
 const EASE = [0.22, 1, 0.36, 1]
 
@@ -22,16 +23,16 @@ export default function BrandStatement() {
       {/* Decorative floating panels — editorial depth */}
       <MangaPanel
         variant="frame"
-        className="absolute left-[6%] top-[12%] hidden h-[40%] w-28 border-white/[0.06] lg:block"
+        className="absolute left-[6%] top-[12%] hidden h-[40%] w-28 border-white/6 lg:block"
         style={{ transform: 'rotate(-1deg)' }}
       />
       <MangaPanel
         variant="frame"
-        className="absolute right-[8%] bottom-[15%] hidden h-20 w-[28%] border-white/[0.05] lg:block"
+        className="absolute right-[8%] bottom-[15%] hidden h-20 w-[28%] border-white/5 lg:block"
         style={{ transform: 'rotate(0.5deg)' }}
       />
 
-      <div className="mx-auto max-w-5xl px-6 text-center lg:px-24">
+      <Container className="text-center">
         {/* Mono label */}
         <SectionReveal>
           <span className="mb-12 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
@@ -62,7 +63,7 @@ export default function BrandStatement() {
             侘寂 — Wabi-sabi
           </span>
         </SectionReveal>
-      </div>
+      </Container>
     </section>
   )
 }

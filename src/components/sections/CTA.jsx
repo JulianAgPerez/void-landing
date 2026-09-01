@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion'
 import SectionReveal from '../ui/SectionReveal'
 import MangaPanel from '../ui/MangaPanel'
+import Container from '../ui/Container'
 
 const EASE = [0.22, 1, 0.36, 1]
 
@@ -49,7 +50,7 @@ function MagnetButton({ children }) {
       {/* Fill — eases from transparent to near-white on hover */}
       <span
         aria-hidden="true"
-        className="absolute inset-0 -z-0 rounded-full bg-void-50/95 transition-transform duration-500 ease-out"
+        className="absolute inset-0 z-0 rounded-full bg-void-50/95 transition-transform duration-500 ease-out"
         style={{
           transform: prefersReducedMotion || isHovered ? 'scale(1)' : 'scale(0.06)',
           opacity: isHovered ? 1 : 0,
@@ -73,7 +74,7 @@ export default function CTA() {
     <section
       id="contact"
       aria-label="Begin"
-      className="relative overflow-hidden border-t border-void-700/20 bg-void-850 py-56 md:py-72"
+      className="relative overflow-hidden border-t border-void-700/20 bg-void-850 py-56 md:py-72 lg:pt-80"
     >
       {/* Giant watermark — final editorial mark, fades as you leave */}
       {!prefersReducedMotion && (
@@ -83,7 +84,7 @@ export default function CTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, margin: '-15%' }}
           transition={{ duration: 2, ease: EASE }}
-          className="pointer-events-none absolute inset-x-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-center text-[38vw] leading-none font-light whitespace-nowrap text-void-100/[0.04] lg:text-[30vw]"
+          className="pointer-events-none absolute inset-x-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-center text-[38vw] leading-none font-light whitespace-nowrap text-void-100/4 lg:text-[30vw]"
           style={{ fontFamily: 'var(--font-serif)', letterSpacing: '0.16em' }}
         >
           静寂
@@ -93,13 +94,13 @@ export default function CTA() {
       {/* MangaPanel frame around CTA content */}
       <MangaPanel
         variant="frame"
-        className="absolute left-1/2 top-1/2 hidden w-[80%] max-w-2xl -translate-x-1/2 -translate-y-1/2 border-white/[0.08] lg:block pointer-events-none"
+        className="absolute left-1/2 top-1/2 hidden w-[80%] max-w-2xl -translate-x-1/2 -translate-y-1/2 border-white/8 lg:block pointer-events-none"
       />
 
-      <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-6 text-center lg:px-24">
+      <Container className="relative z-10 flex flex-col items-center text-center">
         {/* Mono label */}
         <SectionReveal>
-          <span className="mb-10 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
+          <span className="mb-12 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
             05 — Ritual
           </span>
         </SectionReveal>
@@ -118,20 +119,20 @@ export default function CTA() {
 
         {/* CTA button */}
         <SectionReveal delay={0.25}>
-          <div className="mt-14 md:mt-16">
+          <div className="mt-16 md:mt-20">
             <MagnetButton>Begin the ritual</MagnetButton>
           </div>
         </SectionReveal>
 
         {/* Quiet note */}
         <SectionReveal delay={0.35}>
-          <p className="mt-10 max-w-sm font-mono text-[11px] leading-relaxed tracking-[0.15em] text-void-400 uppercase">
+          <p className="mt-12 max-w-sm font-mono text-[11px] leading-relaxed tracking-[0.15em] text-void-400 uppercase">
             No noise. No rush.
             <br />
             Just an object of stillness.
           </p>
         </SectionReveal>
-      </div>
+      </Container>
     </section>
   )
 }

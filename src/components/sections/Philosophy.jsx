@@ -1,5 +1,6 @@
 import SectionReveal from '../ui/SectionReveal'
 import MangaPanel from '../ui/MangaPanel'
+import Container from '../ui/Container'
 
 const pillars = [
   {
@@ -24,7 +25,7 @@ export default function Philosophy() {
     <section
       id="philosophy"
       aria-label="Philosophy"
-      className="relative border-t border-void-700/20 bg-void-850 py-48 md:py-64"
+      className="relative border-t border-void-700/20 bg-void-850 py-48 md:py-64 lg:pb-72"
     >
       {/* Decorative escaped panel borders */}
       <MangaPanel
@@ -39,10 +40,10 @@ export default function Philosophy() {
         className="absolute left-[3%] bottom-[20%] hidden h-28 w-2 border-white/[0.08] lg:block"
       />
 
-      <div className="mx-auto max-w-5xl px-6 text-center lg:px-24">
+      <Container className="text-center">
         {/* Header */}
         <SectionReveal>
-          <span className="mb-4 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
+          <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
             03 — Philosophy
           </span>
         </SectionReveal>
@@ -57,7 +58,7 @@ export default function Philosophy() {
         </SectionReveal>
 
         <SectionReveal delay={0.15}>
-          <p className="mt-6 mx-auto max-w-2xl text-base leading-relaxed text-void-300 md:text-lg">
+          <p className="mt-8 mx-auto max-w-2xl text-base leading-relaxed text-void-300 md:text-lg">
             VOID exists at the intersection of craft and quiet. We design objects
             that ask you to slow down — not to consume, but to be present. Each piece
             is an invitation to pause, to notice, to return to what matters.
@@ -65,7 +66,7 @@ export default function Philosophy() {
         </SectionReveal>
 
         {/* Pillars — each in its own MangaPanel frame */}
-        <div className="mt-20 grid grid-cols-1 gap-6 md:mt-28 md:grid-cols-3">
+        <div className="mt-24 grid grid-cols-1 gap-6 md:mt-32 md:grid-cols-3">
           {pillars.map((pillar, i) => (
             <SectionReveal key={pillar.kanji} delay={0.2 + i * 0.1}>
               <MangaPanel variant="frame" className="flex flex-col gap-4 p-6 md:p-8 h-full">
@@ -90,7 +91,7 @@ export default function Philosophy() {
             </SectionReveal>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

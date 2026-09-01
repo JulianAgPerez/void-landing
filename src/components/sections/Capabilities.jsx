@@ -1,5 +1,6 @@
 import SectionReveal from '../ui/SectionReveal'
 import MangaPanel from '../ui/MangaPanel'
+import Container from '../ui/Container'
 
 const specs = [
   {
@@ -45,17 +46,17 @@ export default function Capabilities() {
     <section
       id="details"
       aria-label="Details"
-      className="relative border-t border-void-700/20 bg-void-900 py-48 md:py-64"
+      className="relative border-t border-void-700/20 bg-void-900 py-48 md:py-64 lg:pb-80"
     >
-      <div className="mx-auto max-w-5xl px-6 lg:px-24">
+      <Container>
         {/* Decorative outer frame around entire specs section */}
         <MangaPanel
           variant="frame"
-          className="absolute inset-x-6 top-32 bottom-32 hidden border-white/[0.05] lg:block pointer-events-none"
+          className="absolute inset-x-6 top-32 bottom-32 hidden border-white/5 lg:block pointer-events-none sm:inset-x-8 md:inset-x-14 xl:inset-x-32"
         />
         {/* Header */}
         <SectionReveal>
-          <span className="mb-4 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
+          <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
             04 — Details
           </span>
         </SectionReveal>
@@ -70,10 +71,10 @@ export default function Capabilities() {
         </SectionReveal>
 
         {/* Spec grid — each spec wrapped in MangaPanel */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {specs.map((spec, i) => (
             <SectionReveal key={spec.label} delay={0.15 + i * 0.08}>
-              <MangaPanel variant="frame" className="p-6 md:p-8 h-full">
+              <MangaPanel variant="frame" className="p-6 md:p-10 h-full">
                 {/* Big number */}
                 <span
                   className="block text-4xl font-light text-void-100/80 md:text-5xl"
@@ -95,7 +96,7 @@ export default function Capabilities() {
             </SectionReveal>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
