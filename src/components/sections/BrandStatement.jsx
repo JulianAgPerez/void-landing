@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import SectionReveal from '../ui/SectionReveal'
+import MangaPanel from '../ui/MangaPanel'
 
 const EASE = [0.22, 1, 0.36, 1]
 
@@ -16,9 +17,21 @@ export default function BrandStatement() {
     <section
       id="brand"
       aria-label="Brand statement"
-      className="relative bg-void-850 py-40 md:py-52 lg:py-60"
+      className="relative border-t border-void-700/20 bg-void-850 py-48 md:py-64 lg:py-72"
     >
-      <div className="mx-auto max-w-5xl px-6 lg:px-24">
+      {/* Decorative floating panels — editorial depth */}
+      <MangaPanel
+        variant="frame"
+        className="absolute left-[6%] top-[12%] hidden h-[40%] w-28 border-white/[0.06] lg:block"
+        style={{ transform: 'rotate(-1deg)' }}
+      />
+      <MangaPanel
+        variant="frame"
+        className="absolute right-[8%] bottom-[15%] hidden h-20 w-[28%] border-white/[0.05] lg:block"
+        style={{ transform: 'rotate(0.5deg)' }}
+      />
+
+      <div className="mx-auto max-w-5xl px-6 text-center lg:px-24">
         {/* Mono label */}
         <SectionReveal>
           <span className="mb-12 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
@@ -26,7 +39,7 @@ export default function BrandStatement() {
           </span>
         </SectionReveal>
 
-        {/* Statement lines — progressive reveal */}
+        {/* Statement lines — progressive reveal, centered */}
         <div className="space-y-1">
           {lines.map((line, i) => (
             <SectionReveal key={i} delay={0.15 * (i + 1)} y={prefersReducedMotion ? 0 : 16}>

@@ -1,4 +1,5 @@
 import SectionReveal from '../ui/SectionReveal'
+import MangaPanel from '../ui/MangaPanel'
 
 const specs = [
   {
@@ -44,9 +45,14 @@ export default function Capabilities() {
     <section
       id="details"
       aria-label="Details"
-      className="relative bg-void-900 py-32 md:py-44"
+      className="relative border-t border-void-700/20 bg-void-900 py-48 md:py-64"
     >
       <div className="mx-auto max-w-5xl px-6 lg:px-24">
+        {/* Decorative outer frame around entire specs section */}
+        <MangaPanel
+          variant="frame"
+          className="absolute inset-x-6 top-32 bottom-32 hidden border-white/[0.05] lg:block pointer-events-none"
+        />
         {/* Header */}
         <SectionReveal>
           <span className="mb-4 block font-mono text-[10px] tracking-[0.3em] text-void-500 uppercase">
@@ -63,23 +69,11 @@ export default function Capabilities() {
           </h2>
         </SectionReveal>
 
-        {/* Spec grid — 2 cols desktop, 1 mobile */}
-        <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
+        {/* Spec grid — each spec wrapped in MangaPanel */}
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {specs.map((spec, i) => (
             <SectionReveal key={spec.label} delay={0.15 + i * 0.08}>
-              <div
-                className={`py-8 ${
-                  i % 2 === 0 && i < specs.length - 1
-                    ? 'md:border-r md:border-void-700 md:pr-12'
-                    : ''
-                } ${
-                  i < specs.length - 2 || (i === specs.length - 2 && specs.length % 2 !== 0)
-                    ? 'border-b border-void-700'
-                    : i < specs.length - 1
-                      ? 'border-b border-void-700 md:border-b-0'
-                      : ''
-                } ${i % 2 === 1 || i === specs.length - 1 ? 'md:pl-12' : ''}`}
-              >
+              <MangaPanel variant="frame" className="p-6 md:p-8 h-full">
                 {/* Big number */}
                 <span
                   className="block text-4xl font-light text-void-100/80 md:text-5xl"
@@ -97,7 +91,7 @@ export default function Capabilities() {
                 <p className="mt-3 text-sm leading-relaxed text-void-500">
                   {spec.description}
                 </p>
-              </div>
+              </MangaPanel>
             </SectionReveal>
           ))}
         </div>

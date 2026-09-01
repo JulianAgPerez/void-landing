@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
+import MangaPanel from '../ui/MangaPanel'
 
 const EASE = [0.22, 1, 0.36, 1]
 
@@ -20,7 +21,7 @@ export default function Hero() {
     <section
       id="top"
       ref={ref}
-      className="relative flex min-h-screen overflow-hidden bg-void-900"
+      className="relative flex min-h-screen overflow-hidden bg-void-900 pt-10"
     >
       {/* Editorial image bleeding off edge, subtle parallax */}
       {!prefersReducedMotion && (
@@ -58,12 +59,17 @@ export default function Hero() {
         style={prefersReducedMotion ? undefined : { y: contentY, opacity }}
         className="relative z-10 flex min-h-screen flex-col justify-center px-6 pt-24 pb-40 lg:px-24"
       >
-        {/* Spec label — top left corner (editorial touch) */}
+        {/* Decorative tall narrow frame — right side */}
+        <MangaPanel
+          variant="frame"
+          className="absolute right-16 top-[18%] hidden h-[55%] w-px lg:block"
+        />
+        {/* Spec label — inside a MangaPanel frame */}
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: prefersReducedMotion ? 0.3 : 1.1, delay: 0.3, ease: EASE }}
-          className="mb-10 font-mono text-[10px] tracking-[0.25em] text-void-500 uppercase"
+          className="mb-10 inline-flex w-fit border border-white/[0.12] px-4 py-2 font-mono text-[10px] tracking-[0.25em] text-void-500 uppercase"
         >
           VOID / EST. 2026 / No.001
         </motion.span>

@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react'
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion'
+import MangaPanel from './MangaPanel'
 
 const SPRING = { stiffness: 150, damping: 20, mass: 0.5 }
 
-export default function ProductCard({ product, index = 0 }) {
+export default function ProductCard({ product, index = 0, frame = false }) {
   const ref = useRef(null)
   const prefersReducedMotion = useReducedMotion()
   const [isHovered, setIsHovered] = useState(false)
@@ -38,19 +39,37 @@ export default function ProductCard({ product, index = 0 }) {
       aria-label={`${product.name} — ${product.category}`}
     >
       {/* Image container */}
-      <div className="relative overflow-hidden p-10 md:p-14">
-        <motion.img
-          src={product.image}
-          alt={product.description}
-          style={
-            prefersReducedMotion
-              ? undefined
-              : { x: imageX, y: imageY }
-          }
-          className="h-48 w-full object-contain opacity-80 grayscale transition-opacity duration-700 group-hover:opacity-100 md:h-64"
-          loading="lazy"
-        />
-      </div>
+      {frame ? (
+        <MangaPanel variant="frame" className="m-3 md:m-4">
+          <div className="relative overflow-hidden p-8 md:p-12">
+            <motion.img
+              src={product.image}
+              alt={product.description}
+              style={
+                prefersReducedMotion
+                  ? undefined
+                  : { x: imageX, y: imageY }
+              }
+              className="h-48 w-full object-contain opacity-80 grayscale transition-opacity duration-700 group-hover:opacity-100 md:h-64"
+              loading="lazy"
+            />
+          </div>
+        </MangaPanel>
+      ) : (
+        <div className="relative overflow-hidden p-10 md:p-14">
+          <motion.img
+            src={product.image}
+            alt={product.description}
+            style={
+              prefersReducedMotion
+                ? undefined
+                : { x: imageX, y: imageY }
+            }
+            className="h-48 w-full object-contain opacity-80 grayscale transition-opacity duration-700 group-hover:opacity-100 md:h-64"
+            loading="lazy"
+          />
+        </div>
+      )}
 
       {/* Info */}
       <div className="border-t border-void-700 px-6 pb-6 pt-5 md:px-8 md:pt-6">

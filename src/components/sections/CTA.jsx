@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion'
 import SectionReveal from '../ui/SectionReveal'
+import MangaPanel from '../ui/MangaPanel'
 
 const EASE = [0.22, 1, 0.36, 1]
 
@@ -72,7 +73,7 @@ export default function CTA() {
     <section
       id="contact"
       aria-label="Begin"
-      className="relative overflow-hidden bg-void-850 py-40 md:py-56"
+      className="relative overflow-hidden border-t border-void-700/20 bg-void-850 py-56 md:py-72"
     >
       {/* Giant watermark — final editorial mark, fades as you leave */}
       {!prefersReducedMotion && (
@@ -82,12 +83,18 @@ export default function CTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, margin: '-15%' }}
           transition={{ duration: 2, ease: EASE }}
-          className="pointer-events-none absolute inset-x-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-center text-[38vw] leading-none font-light whitespace-nowrap text-void-100/[0.025] lg:text-[30vw]"
+          className="pointer-events-none absolute inset-x-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-center text-[38vw] leading-none font-light whitespace-nowrap text-void-100/[0.04] lg:text-[30vw]"
           style={{ fontFamily: 'var(--font-serif)', letterSpacing: '0.16em' }}
         >
           静寂
         </motion.span>
       )}
+
+      {/* MangaPanel frame around CTA content */}
+      <MangaPanel
+        variant="frame"
+        className="absolute left-1/2 top-1/2 hidden w-[80%] max-w-2xl -translate-x-1/2 -translate-y-1/2 border-white/[0.08] lg:block pointer-events-none"
+      />
 
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-6 text-center lg:px-24">
         {/* Mono label */}
