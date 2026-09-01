@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void-900: #0D0D0D;
+  --color-void-850: #141414;
+  --color-void-800: #1C1C1C;
+  --color-void-700: #2A2A2A;
+  --color-void-500: #555555;
+  --color-void-400: #888888;
+  --color-void-300: #BBBBBB;
+  --color-void-100: #F0EDE8;
+  --color-void-50:  #FAFAF8;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll is controlled by Lenis — do not set smooth here */
+
+body {
+  background-color: var(--color-void-900);
+  color: var(--color-void-100);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(240, 237, 232, 0.9);
+  color: #0D0D0D;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-void-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-void-700);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-void-500);
+}
