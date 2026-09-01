@@ -1,5 +1,6 @@
 import SectionReveal from '../ui/SectionReveal'
 import MangaPanel from '../ui/MangaPanel'
+import WhitePanel from '../ui/WhitePanel'
 import Container from '../ui/Container'
 
 const pillars = [
@@ -39,6 +40,16 @@ export default function Philosophy() {
         variant="frame"
         className="absolute left-[3%] bottom-[20%] hidden h-28 w-2 border-white/8 lg:block"
       />
+
+      {/* White panel stamp — manga editorial accent */}
+      <WhitePanel
+        className="absolute right-[6%] bottom-[35%] hidden w-24 h-24 rounded-sm lg:flex items-center justify-center"
+        style={{ transform: 'rotate(-3deg)' }}
+      >
+        <span className="text-3xl font-light" style={{ fontFamily: 'var(--font-serif)' }}>
+          静
+        </span>
+      </WhitePanel>
 
       <Container className="text-center">
         {/* Header */}

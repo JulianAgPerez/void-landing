@@ -5,4 +5,5 @@ dist
 *.log
 .DS_Store
 
-# opencode skill registry artifacts.atl/
+# opencode skill registry artifacts
+.atl/

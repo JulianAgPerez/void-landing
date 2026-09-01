@@ -55,7 +55,7 @@ export default function EditorialSpread() {
         <div className="absolute inset-0 bg-linear-to-t from-void-900/70 via-transparent to-void-900/30" />
 
         {/* Content — asymmetric placement */}
-        <div className="relative z-10 flex h-full flex-col justify-end items-end px-6 pb-16 sm:px-8 md:px-14 md:pb-24 lg:px-24 xl:px-32">
+        <div className="relative z-10 flex h-full flex-col justify-end items-end px-6 pb-20 sm:px-8 md:px-14 md:pb-28 lg:px-24 lg:pr-32 xl:px-32">
           <div className="max-w-xl text-right">
             <SectionReveal>
               <span className="mb-8 block font-mono text-[10px] tracking-[0.3em] text-void-500/70 uppercase">
