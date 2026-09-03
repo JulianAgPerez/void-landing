@@ -7,3 +7,4 @@ dist
 
 # opencode skill registry artifacts
 .atl/
+.vercel
